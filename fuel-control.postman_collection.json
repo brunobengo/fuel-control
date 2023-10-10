@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "76c7b038-2fb3-493e-baa5-1caf51e6f48a",
+		"name": "fuel-control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12723032"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "all cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cars/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cars",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Nome\": \"Novo carro\",\n    \"Marca\": \"Renault\",\n    \"Modelo\": \"Clio\",\n    \"DataDeFabricacao\": \"2013-10-07\",\n    \"ConsumoMedioCidade\": 16.5,\n    \"ConsumoMedioRodovia\": 30.5\n    \n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cars/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cars",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cars",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Nome\": \"primeiro-modificado\",\n    \"Marca\": \"Toyota\",\n    \"Modelo\": \"Hilux\",\n    \"DataDeFabricacao\": \"2023-12-07\",\n    \"ConsumoMedioCidade\": 5.5,\n    \"ConsumoMedioRodovia\": 11\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cars/v1/ebc94c94-83d6-4c8f-98af-8f1d9a0738d1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cars",
+								"v1",
+								"ebc94c94-83d6-4c8f-98af-8f1d9a0738d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update cars - uuid inválido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Nome\": \"primeiro-modificado\",\n    \"Marca\": \"Toyota\",\n    \"Modelo\": \"Hilux\",\n    \"DataDeFabricacao\": \"2023-12-07\",\n    \"ConsumoMedioCidade\": 22.5,\n    \"ConsumoMedioRodovia\": 11\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cars/v1/6b8c507e-04de-4a33-a48e-8a3f3d062134",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cars",
+								"v1",
+								"6b8c507e-04de-4a33-a48e-8a3f3d062134"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cars/v1/6b8c507e-04de-4a33-a48e-8a3f3d0621f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cars",
+								"v1",
+								"6b8c507e-04de-4a33-a48e-8a3f3d0621f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calculation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"fuelPrice\": 1.0,\n    \"kmInCity\": 500,\n    \"kmInHighway\": 500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/calculation/v1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"calculation",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
