@@ -11,11 +11,12 @@ Essa API permite ao usuário o controle da sua frota e a previsão de gastos com
     * `mvn clean package`
     * `docker build --tag=fuel-control:latest .`
     * `docker run -p8080:8888 fuel-control:latest`
+
+- **Execução a partir do Jar**
+  * Se posicionar na raiz do projeto e executar os comandos abaixo:
+  * `mvn clean package`
+  * `java -jar target/fuel-control-0.0.1-SNAPSHOT.jar`
   
-- **Execução a partir do projeto**
-  * após fazer o download do código no repositório, o projeto pode ser executado:;
-    * utilizando o jar que está em /target;
-    * utilizando alguma IDE da sua preferência;
 -----
 
 * Todas os endpoints e payloads podem ser acessados
