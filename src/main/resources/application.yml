@@ -1,5 +1,8 @@
 server:
   port: 8080
+  servlet:
+    context-path: /fuel-control
+
 spring:
   datasource:
     url: jdbc:h2:mem:mydb

@@ -1,0 +1,6 @@
+services:
+  fuel-control:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
